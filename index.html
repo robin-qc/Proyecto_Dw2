@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaStep | Calzado Femenino Colorido</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👠</text></svg>">
+</head>
+<body>
+    <!-- Loader de bienvenida -->
+    <div class="welcome-loader" id="welcomeLoader">
+        <div class="loader-content">
+            <div class="flowers">
+                <div class="flower">🌸</div>
+                <div class="flower">🌺</div>
+                <div class="flower">🌷</div>
+            </div>
+            <div class="shoes-float">
+                <div class="shoe">👠</div>
+                <div class="shoe">👟</div>
+                <div class="shoe">👡</div>
+            </div>
+            <h1 class="loader-title">BellaStep</h1>
+            <p class="loader-subtitle">Calzado que hace brillar tus pasos</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <span class="logo-icon">👠</span>
+                    <span class="logo-text">BellaStep</span>
+                </div>
+                <div class="tagline">Donde cada paso tiene estilo</div>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-link active"><i class="fas fa-home"></i> <span>Inicio</span></a>
+                <a href="#categorias" class="nav-link"><i class="fas fa-shoe-prints"></i> <span>Categorías</span></a>
+                <a href="#nuevo" class="nav-link"><i class="fas fa-star"></i> <span>Nuevo</span></a>
+                <a href="#ofertas" class="nav-link"><i class="fas fa-tag"></i> <span>Ofertas</span></a>
+                <a href="#colecciones" class="nav-link"><i class="fas fa-heart"></i> <span>Colecciones</span></a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="user-section" id="userSection">
+                    <div class="user-btn" id="userBtn">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="user-text">
+                            <span class="login-text">Hola, inicia sesión</span>
+                            <span class="user-name" id="userGreeting">Mi cuenta</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-info" id="userInfo" style="display: none;">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="user-details">
+                                <h4 id="displayName">Usuario</h4>
+                                <p id="displayEmail">correo@ejemplo.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-links">
+                            <a href="#" class="dropdown-link" id="loginLink"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                            <a href="#" class="dropdown-link" id="registerLink"><i class="fas fa-user-plus"></i> Registrarse</a>
+                            <a href="#" class="dropdown-link" id="myAccountLink" style="display: none;"><i class="fas fa-user"></i> Mi Cuenta</a>
+                            <a href="#" class="dropdown-link" id="myOrdersLink" style="display: none;"><i class="fas fa-shopping-bag"></i> Mis Pedidos</a>
+                            <a href="#" class="dropdown-link" id="wishlistLink"><i class="fas fa-heart"></i> Lista de Deseos</a>
+                            <a href="#" class="dropdown-link" id="logoutLink" style="display: none;"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-icons">
+                    <div class="icon-wrapper" id="wishlistBtn">
+                        <i class="fas fa-heart"></i>
+                        <span class="icon-badge" id="wishlistCount">3</span>
+                    </div>
+                    
+                    <div class="icon-wrapper" id="cartBtn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="icon-badge" id="cartCount">2</span>
+                    </div>
+                    
+                    <div class="menu-toggle" id="menuToggle">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header principal -->
+    <header class="main-header" id="inicio">
+        <div class="header-content">
+            <div class="header-text">
+                <h1 class="main-title">
+                    <span class="title-line">Descubre el</span>
+                    <span class="title-line color-1">calzado</span>
+                    <span class="title-line color-2">que</span>
+                    <span class="title-line color-3">expresa</span>
+                    <span class="title-line color-4">tu esencia</span>
+                </h1>
+                <p class="header-subtitle">
+                    Desde zapatillas deportivas hasta tacones elegantes, tenemos el par perfecto para cada ocasión de tu vida.
+                </p>
+                
+                <div class="header-actions">
+                    <button class="btn-primary" id="exploreBtn">
+                        <span>Explorar Colección</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary" id="videoBtn">
+                        <i class="fas fa-play"></i>
+                        <span>Ver Video</span>
+                    </button>
+                </div>
+                
+                <div class="header-stats">
+                    <div class="stat">
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Modelos únicos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Marcas exclusivas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Valoración clientes</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-image">
+                <div class="shoe-showcase">
+                    <div class="showcase-shoe main-shoe">
+                        <div class="shoe-img">👠</div>
+                        <div class="shoe-info">
+                            <h3>Tacón Elegante</h3>
+                            <p>Colección Primavera 2024</p>
+                            <div class="shoe-price">$89.99</div>
+                        </div>
+                    </div>
+                    
+                    <div class="shoe-showcase-grid">
+                        <div class="showcase-item">
+                            <div class="item-img">👟</div>
+                            <div class="item-badge new">NUEVO</div>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="item-img">🥿</div>
+                            <div class="item-badge sale">-30%</div>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="item-img">👡</div>
+                            <div class="item-badge trend">TENDENCIA</div>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="item-img">👢</div>
+                            <div class="item-badge eco">ECO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-decoration">
+            <div class="decoration-circle circle-1"></div>
+            <div class="decoration-circle circle-2"></div>
+            <div class="decoration-circle circle-3"></div>
+            <div class="flower-decoration">🌸</div>
+            <div class="flower-decoration">🌺</div>
+            <div class="flower-decoration">🌷</div>
+        </div>
+    </header>
+
+    <!-- Sección de Categorías -->
+    <section class="categories-section" id="categorias">
+        <div class="section-header">
+            <h2 class="section-title">Explora por Categoría</h2>
+            <p class="section-subtitle">Encuentra el calzado perfecto para cada momento</p>
+        </div>
+        
+        <div class="categories-grid">
+            <div class="category-card category-1">
+                <div class="category-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <h3>Zapatillas</h3>
+                <p>Deportivas y casual para el día a día</p>
+                <div class="category-count">350 modelos</div>
+                <div class="category-hover">
+                    <button class="btn-view" onclick="window.location.href='catalogo.html?cat=zapatillas'">Ver Colección</button>
+                </div>
+            </div>
+            
+            <div class="category-card category-2">
+                <div class="category-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>Tacones</h3>
+                <p>Elegancia y sofisticación para eventos especiales</p>
+                <div class="category-count">280 modelos</div>
+                <div class="category-hover">
+                    <button class="btn-view" onclick="window.location.href='catalogo.html?cat=tacones'">Ver Colección</button>
+                </div>
+            </div>
+            
+            <div class="category-card category-3">
+                <div class="category-icon">
+                    <i class="fas fa-shoe-prints"></i>
+                </div>
+                <h3>Botas</h3>
+                <p>Estilo y protección para cualquier temporada</p>
+                <div class="category-count">190 modelos</div>
+                <div class="category-hover">
+<button class="btn-view" onclick="location.href='catalogo.html?cat=botas'">
+    Ver Colección
+</button>                </div>
+            </div>
+            
+            <div class="category-card category-4">
+                <div class="category-icon">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <h3>Sandalias</h3>
+                <p>Frescura y comodidad para el verano</p>
+                <div class="category-count">320 modelos</div>
+                <div class="category-hover">
+<button class="btn-view" onclick="location.href='catalogo.html?cat=sandalias'">
+    Ver Colección
+</button>                </div>
+            </div>
+            
+            <div class="category-card category-5">
+                <div class="category-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Formales</h3>
+                <p>Elegancia para el entorno laboral</p>
+                <div class="category-count">210 modelos</div>
+                <div class="category-hover">
+<button class="btn-view" onclick="location.href='catalogo.html?cat=formales'">
+    Ver Colección
+</button>                </div>
+            </div>
+            
+            <div class="category-card category-6">
+                <div class="category-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3>Infantil</h3>
+                <p>Para las princesas de la casa</p>
+                <div class="category-count">180 modelos</div>
+                <div class="category-hover">
+<button class="btn-view" onclick="location.href='catalogo.html?cat=infantil'">
+    Ver Colección
+</button>                </div>
+            </div>
+            
+            <div class="category-card category-7">
+                <div class="category-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Hogar</h3>
+                <p>Máxima comodidad para estar en casa</p>
+                <div class="category-count">95 modelos</div>
+                <div class="category-hover">
+                    <button class="btn-view">Ver Colección</button>
+                </div>
+            </div>
+            
+            <div class="category-card category-8">
+                <div class="category-icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <h3>Invierno</h3>
+                <p>Calidez y estilo para el frío</p>
+                <div class="category-count">120 modelos</div>
+                <div class="category-hover">
+                    <button class="btn-view">Ver Colección</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Nuevos Lanzamientos -->
+    <section class="new-arrivals" id="nuevo">
+        <div class="section-header">
+            <div class="title-row">
+                <h2 class="section-title">Nuevos Lanzamientos</h2>
+                <div class="season-tag">Primavera 2024</div>
+            </div>
+            <p class="section-subtitle">Descubre las últimas tendencias en calzado femenino</p>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Los productos se cargarán dinámicamente -->
+        </div>
+        
+        <div class="section-footer">
+            <button class="btn-load-more" id="loadMoreBtn">
+                <span>Cargar más productos</span>
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección de Ofertas -->
+    <section class="offers-section" id="ofertas">
+        <div class="offers-container">
+            <div class="offer-card offer-main">
+                <div class="offer-content">
+                    <div class="offer-tag">OFERTA ESPECIAL</div>
+                    <h2 class="offer-title">Hasta 50% de descuento</h2>
+                    <p class="offer-description">En toda la colección de verano. Tiempo limitado.</p>
+                    <div class="offer-timer" id="offerTimer">
+                        <div class="timer-item">
+                            <div class="timer-value" id="days">05</div>
+                            <div class="timer-label">Días</div>
+                        </div>
+                        <div class="timer-item">
+                            <div class="timer-value" id="hours">12</div>
+                            <div class="timer-label">Horas</div>
+                        </div>
+                        <div class="timer-item">
+                            <div class="timer-value" id="minutes">45</div>
+                            <div class="timer-label">Minutos</div>
+                        </div>
+                        <div class="timer-item">
+                            <div class="timer-value" id="seconds">30</div>
+                            <div class="timer-label">Segundos</div>
+                        </div>
+                    </div>
+                    <button class="btn-offer">Aprovechar Oferta</button>
+                </div>
+                <div class="offer-image">
+                    <div class="shoe-display">👡</div>
+                </div>
+            </div>
+            
+            <div class="offers-side">
+                <div class="offer-card offer-small">
+                    <div class="offer-icon">🎁</div>
+                    <h3>Envío Gratis</h3>
+                    <p>En compras mayores a $50</p>
+                </div>
+                
+                <div class="offer-card offer-small">
+                    <div class="offer-icon">💝</div>
+                    <h3>Primera Compra</h3>
+                    <p>15% de descuento para nuevos clientes</p>
+                </div>
+                
+                <div class="offer-card offer-small">
+                    <div class="offer-icon">🔄</div>
+                    <h3>Devoluciones Fáciles</h3>
+                    <p>30 días para cambiar de opinión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Colecciones -->
+    <section class="collections-section" id="colecciones">
+        <div class="section-header">
+            <h2 class="section-title">Colecciones Destacadas</h2>
+            <p class="section-subtitle">Descubre nuestras líneas exclusivas de calzado</p>
+        </div>
+        
+        <div class="collections-grid">
+            <div class="collection-card collection-1">
+                <div class="collection-content">
+                    <h3>Colección Boho</h3>
+                    <p>Estilo libre y colorido para espíritus libres</p>
+                    <button class="btn-collection">Explorar</button>
+                </div>
+            </div>
+            
+            <div class="collection-card collection-2">
+                <div class="collection-content">
+                    <h3>Urban Chic</h3>
+                    <p>Moda urbana con toque elegante para la ciudad</p>
+                    <button class="btn-collection">Explorar</button>
+                </div>
+            </div>
+            
+            <div class="collection-card collection-3">
+                <div class="collection-content">
+                    <h3>Night Glam</h3>
+                    <p>Brilo y elegancia para tus noches especiales</p>
+                    <button class="btn-collection">Explorar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Autenticación -->
+    <div class="auth-modal" id="authModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="login">Iniciar Sesión</button>
+                    <button class="tab-btn" data-tab="register">Registrarse</button>
+                </div>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="tab-content active" id="loginTab">
+                    <div class="social-login">
+                        <button class="social-btn fb-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Continuar con Facebook</span>
+                        </button>
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            <span>Continuar con Google</span>
+                        </button>
+                    </div>
+                    
+                    <div class="divider">
+                        <span>o ingresa con tu email</span>
+                    </div>
+                    
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="loginEmail" placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Contraseña</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="loginPassword" placeholder="Tu contraseña" required>
+                                <button type="button" class="toggle-password" data-target="loginPassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="rememberMe">
+                                    <span>Recordarme</span>
+                                </label>
+                                <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Iniciar Sesión</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="registerTab">
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="registerName">Nombre Completo</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="registerName" placeholder="Tu nombre completo" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerEmail">Email</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="registerEmail" placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerPassword">Contraseña</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerPassword" placeholder="Crea una contraseña" required>
+                                <button type="button" class="toggle-password" data-target="registerPassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registerConfirm">Confirmar Contraseña</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerConfirm" placeholder="Repite tu contraseña" required>
+                                <button type="button" class="toggle-password" data-target="registerConfirm">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" id="acceptTerms" required>
+                                <span>Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a></span>
+                            </label>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox" id="newsletter">
+                                <span>Quiero recibir ofertas y novedades por email</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Crear Cuenta</span>
+                            <i class="fas fa-user-plus"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <p>Al registrarte aceptas nuestros <a href="#">Términos de Uso</a> y <a href="#">Política de Privacidad</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">👠</span>
+                    <span class="logo-text">BellaStep</span>
+                </div>
+                <p class="footer-description">
+                    Tu destino favorito para calzado femenino de calidad. Ofrecemos estilo, comodidad y tendencias para cada ocasión.
+                </p>
+                
+                <div class="social-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Comprar</h3>
+                <ul class="footer-links">
+                    <li><a href="#categorias">Todas las categorías</a></li>
+                    <li><a href="#nuevo">Nuevos Lanzamientos</a></li>
+                    <li><a href="#ofertas">Ofertas Especiales</a></li>
+                    <li><a href="#colecciones">Colecciones</a></li>
+                    <li><a href="#">Calzado de Temporada</a></li>
+                    <li><a href="#">Regalos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Cómo Comprar</a></li>
+                    <li><a href="#">Tallas y Guías</a></li>
+                    <li><a href="#">Envíos y Entregas</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Av. de la Moda 456, Ciudad Colorida</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hola@bellastep.com</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 9am - 8pm</p>
+                </div>
+                
+                <div class="newsletter">
+                    <h4>Suscríbete a novedades</h4>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Tu email aquí">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="newsletter-note">Recibe ofertas exclusivas y tendencias de moda.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 BellaStep. Todos los derechos reservados. | 
+                    <a href="#">Política de Privacidad</a> | 
+                    <a href="#">Términos de Uso</a> | 
+                    <a href="#">Cookies</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificaciones -->
+    <div class="notifications-container" id="notificationsContainer"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
